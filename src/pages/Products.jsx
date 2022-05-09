@@ -16,7 +16,7 @@ export default function Products() {
   }
 
   const imageBodyTemplate = (rowData) => {
-    return <img src={`../assets/images/bamboo-watch.jpg`} alt="Teste" />;
+    return <img src="/src/bamboo-watch-copy.jpg" alt={rowData.image} />;
     // return <img src={`assets/images/${rowData.image}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={rowData.image} className="product-image" />;
   }
 
@@ -31,7 +31,7 @@ export default function Products() {
       <div className="products">
         <h1>Products</h1>
         <DataTable value={products}>
-          <Column field="id" header="Id" />
+          <Column field="code" header="Code" />
           <Column field="name" header="Name" />
           <Column header="Image" body={imageBodyTemplate} />
           <Column field="price" header="Price" body={priceBodyTemplate} />
